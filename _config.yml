@@ -5,6 +5,24 @@ collections:
   posts:
     title: Posts
     output: true
+    layout: post
+    permalink: /carnet-de-bord/:title/index.html
   uploads:
     title: Uploads
     output: true
+  finds:
+    title: Finds
+    output: true
+    layout: find
+    permalink: /mes-trouvailles/:title/index.html
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: "_finds"
+      type: finds
+    values:
+      layout: find
