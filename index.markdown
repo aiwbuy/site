@@ -4,13 +4,12 @@ date: 2017-05-07 21:17:00 +02:00
 layout: home
 ---
 
-{% for post in site.finds %}
+{% for item in site.finds %}
   <li>
-    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
-
+    {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
     <h2>
-      <a class="post-link" href="{{ post.url | relative_url | replace: '/index.html', '' }}">{{ post.title | escape }}</a>
+      <a class="item-link" href="{{ item.url | relative_url | replace: '/index.html', '' }}">{{ item.title | escape }}</a>
     </h2>
+    <span class="item-timestamp">{{ item.date | date: date_format }}</span>
   </li>
 {% endfor %}

@@ -1,6 +1,7 @@
 ---
 title: All I Wanna Buy
 timezone: Europe/Paris
+permalink: /carnet-de-bord/:title
 collections:
   finds:
     title: Finds

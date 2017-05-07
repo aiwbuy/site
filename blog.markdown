@@ -7,13 +7,12 @@ layout: page
 
 Un endroit où je vous parle de mes trouvailles, centres d'intérêts et aventures.
 
-{% for post in site.posts %}
+{% for item in site.posts %}
   <li>
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
-
     <h2>
-      <a class="post-link" href="{{ post.url | relative_url | replace: '/index.html', '' }}">{{ post.title | escape }}</a>
+      <a class="item-link" href="{{ item.url | relative_url | replace: '/index.html', '' }}">{{ item.title | escape }}</a>
     </h2>
+    <span class="item-timestamp">{{ item.date | date: date_format }}</span>
   </li>
 {% endfor %}
