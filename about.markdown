@@ -1,8 +1,8 @@
 ---
 title: A propos
 date: 2017-05-07 21:17:00 +02:00
+permalink: "/a-propos/index.html"
 layout: page
-permalink: /a-propos/index.html
 ---
 
 Moi c'est Aurélie. C'est tout.

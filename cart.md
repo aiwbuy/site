@@ -1,8 +1,8 @@
 ---
 title: Mon panier
 date: 2017-05-07 21:17:00 +02:00
+permalink: "/mon-panier/index.html"
 layout: page
-permalink: /mon-panier/index.html
 ---
 
 Retrouvez ici toutes les trouvailles que j'ai fini par acheter.
