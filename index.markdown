@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Welcome!
-date: 2017-05-07 19:17:00 Z
+date: 2017-05-07 21:17:00 +02:00
+layout: default
 ---
 
 Hello, world!
