@@ -1,4 +1,5 @@
 ---
+layout: default
 title: First post
 date: 2017-05-07 21:24:00 +02:00
 categories:
