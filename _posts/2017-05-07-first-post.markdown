@@ -5,6 +5,7 @@ categories:
 - cat-one
 tags:
 - tag-one
+thumbnail: "/images/hello.jpg"
 layout: default
 ---
 
