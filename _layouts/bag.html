@@ -11,7 +11,7 @@ layout: default
 
   {% assign finds_in_bag = site.finds | where: "is_in_bag", "yes" %}
 
-  <div class="grid">
+  <div class="grid" id="grid">
     {% for item in finds_in_bag %}
       {% include partials/find_item.html item=item %}
     {% endfor %}

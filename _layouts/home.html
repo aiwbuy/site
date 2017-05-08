@@ -9,7 +9,7 @@ layout: default
     {{ content }}
   </div>
 
-  <div class="grid">
+  <div class="grid" id="grid">
     {% for item in site.finds %}
       {% include partials/find_item.html item=item %}
     {% endfor %}
