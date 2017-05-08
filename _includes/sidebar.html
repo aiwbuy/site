@@ -1,0 +1,12 @@
+<nav>
+  <h1>Mes étagères</h1>
+  <ul>
+    {% for shelf in site.shelves %}
+      <li>
+        <a href="/etageres/{{ shelf.slug }}">
+          {{ shelf.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

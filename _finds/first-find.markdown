@@ -1,10 +1,6 @@
 ---
 title: First find
 date: 2017-05-07 21:24:00 +02:00
-categories:
-- cat-one
-tags:
-- tag-one
 is_in_bag: true
 ---
 
