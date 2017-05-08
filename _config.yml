@@ -34,5 +34,5 @@ defaults:
     type: shelves
   values:
     layout: shelf
-    slug:
+    slug: 
 permalink: "/carnet-de-bord/:title"
