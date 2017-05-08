@@ -1,6 +1,7 @@
 ---
 title: Délices
 date: 2017-05-08 10:29:00 +02:00
+thumbnail: "/uploads/poulet-grille.jpg"
 ---
 
 Après une bonne séance de jam, ce que j'aime par dessus tout c'est manger. Toi aussi je parie ?! xD
