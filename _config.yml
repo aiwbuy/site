@@ -5,6 +5,10 @@ collections:
   posts:
     title: Articles
     output: true
+  shelves:
+    title: Etagères
+    output: true
+    permalink: "/etageres/:title/index.html"
   uploads:
     title: Fichiers
     output: true
@@ -12,10 +16,6 @@ collections:
     title: Trouvailles
     output: true
     permalink: "/mes-trouvailles/:title/index.html"
-  shelves:
-    title: Etagères
-    output: true
-    permalink: "/etageres/:title/index.html"
 defaults:
 - scope:
     path: _posts
@@ -27,7 +27,7 @@ defaults:
     type: finds
   values:
     layout: find
-    is_in_bag:
+    is_in_bag: 
     shelves: []
 - scope:
     path: _shelves
