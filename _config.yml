@@ -2,11 +2,6 @@
 title: All I Wanna Buy
 timezone: Europe/Paris
 collections:
-  finds:
-    title: Trouvailles
-    output: true
-    permalink: "/mes-trouvailles/:title/index.html"
-    layout: find
   posts:
     title: Articles
     output: true
@@ -14,6 +9,11 @@ collections:
   uploads:
     title: Fichiers
     output: true
+  finds:
+    title: Trouvailles
+    output: true
+    permalink: "/mes-trouvailles/:title/index.html"
+    layout: find
 defaults:
 - scope:
     path: _posts
