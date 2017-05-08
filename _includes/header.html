@@ -1,18 +1,78 @@
 {% assign finds_in_bag = site.finds | where: "is_in_bag", "yes" %}
 
-<header>
-  <ul>
-    <li>
-      <a href="/">Mes trouvailles</a>
-    </li>
-    <li>
-      <a href="/mon-panier">Mon panier ({{ finds_in_bag.size }})</a>
-    </li>
-    <li>
-      <a href="/carnet-de-bord">Carnet de bord</a>
-    </li>
-    <li>
-      <a href="/a-propos">A propos</a>
-    </li>
-  </ul>
-</header>
+<nav class="nav">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item">
+        <!-- <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo"> -->
+        <div class="brand">
+          <a href="/" style="color: #fff;">
+            <div>All I Wanna</div>
+            <div>Buy</div>
+          </a>
+        </div>
+      </a>
+    </div>
+
+    <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-right nav-menu">
+
+      {% if page.url == '/' %}
+        {% assign extra_class = "is-active" %}
+      {% else %}
+        {% assign extra_class = "" %}
+      {% endif %}
+
+      <a href="/" class="nav-item {{ extra_class }}">
+        Mes trouvailles
+      </a>
+
+      {% if page.url == '/carnet-de-bord/index.html' %}
+        {% assign extra_class = "is-active" %}
+      {% else %}
+        {% assign extra_class = "" %}
+      {% endif %}
+
+      <a href="/carnet-de-bord" class="nav-item {{ extra_class }}">
+        Carnet de bord
+      </a>
+
+      {% if page.url == '/a-propos/index.html' %}
+        {% assign extra_class = "is-active" %}
+      {% else %}
+        {% assign extra_class = "" %}
+      {% endif %}
+
+      <a href="/a-propos" class="nav-item {{ extra_class }}">
+        A propos
+      </a>
+
+      <a class="nav-item">
+        <i class="fa fa-search"></i>
+      </a>
+
+      {% if page.url == '/mon-panier/index.html' %}
+        {% assign extra_class = "is-active" %}
+      {% else %}
+        {% assign extra_class = "" %}
+      {% endif %}
+
+      <a href="/mon-panier" class="nav-item {{ extra_class }}">
+        <i class="fa fa-shopping-bag "></i>
+        <span class="tag is-warning shopping-bag-tag">
+          {{ finds_in_bag.size }}
+        </span>
+      </a>
+
+    </div>
+  </div>
+</nav>

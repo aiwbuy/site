@@ -4,11 +4,29 @@
   {% include head.html %}
 
   <body>
+
     {% include header.html %}
 
-    {% include sidebar.html %}
+    <div class="container">
 
-    {{ content }}
+      <div style="margin-top: 2rem; margin-bottom: 2rem;">
+
+        <div class="columns">
+
+          <div class="is-one-quarter column">
+            {% include sidebar.html %}
+          </div>
+
+          <div class="is-three-quarters column">
+            {{ content }}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </body>
 
 </html>

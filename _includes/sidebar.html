@@ -1,8 +1,10 @@
-<nav>
-  <h1>Mes étagères</h1>
-  <ul>
+<aside class="menu">
+  <p class="menu-label">
+    Mes étagères
+  </p>
+  <ul class="menu-list">
     {% for item in site.shelves %}
       {% include partials/shelf_item.html item=item %}
     {% endfor %}
   </ul>
-</nav>
+</aside>

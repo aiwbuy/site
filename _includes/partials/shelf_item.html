@@ -1,10 +1,11 @@
+{% if page.url == item.url %}
+  {% assign extra_class = "is-active" %}
+{% else %}
+  {% assign extra_class = "" %}
+{% endif %}
+
 <li>
-  <a href="{{ item.url | relative_url | replace: '/index.html', '' }}">
-    <div>
-      <img src="{{ item.thumbnail }}" width="150" />
-    </div>
-    <div>
-      {{ item.title }}
-    </div>
+  <a href="{{ item.url | relative_url | replace: '/index.html', '' }}" class="sidebar-item {{ extra_class }}">
+    {{ item.title }}
   </a>
 </li>
