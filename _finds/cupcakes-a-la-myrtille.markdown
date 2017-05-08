@@ -4,6 +4,7 @@ date: 2017-05-08 10:34:00 +02:00
 is_in_bag: 'yes'
 shelves:
 - delices
+thumbnail: "/uploads/cupcakes-myrtilles.jpg"
 ---
 
 Je pourrais en manger pendant des heures. C'est un supplice quand je n'en ai plus !
