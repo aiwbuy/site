@@ -2,17 +2,19 @@
 layout: default
 ---
 
-<div class="shelf">
+<div class="bag">
   <h1 class="title">{{ page.title }}</h1>
 
-  <div class="notification">
+  <div class="notification" markdown="1">
     {{ content }}
   </div>
 
-  {% assign finds = site.finds | where_exp: "item", "item.shelves contains page.slug" %}
+  {% assign finds_in_bag = site.finds | where: "is_in_bag", "yes" %}
+
   <div class="grid">
-    {% for item in finds %}
+    {% for item in finds_in_bag %}
       {% include partials/find_item.html item=item %}
     {% endfor %}
   </div>
+
 </div>

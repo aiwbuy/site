@@ -5,6 +5,4 @@ permalink: "/a-propos/index.html"
 layout: page
 ---
 
-Moi c'est Aurélie. C'est tout.
-
-Pour me contacter, c'est [par ici](#) !
+Moi c'est Aurélie ! Pour me contacter, c'est par [ici](#).

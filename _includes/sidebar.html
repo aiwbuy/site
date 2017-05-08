@@ -3,6 +3,27 @@
     Mes étagères
   </p>
   <ul class="menu-list">
+
+    {% if page.url == '/' %}
+      {% assign extra_class = "is-active" %}
+    {% else %}
+      {% assign extra_class = "" %}
+    {% endif %}
+
+    <a href="/" class="sidebar-item {{ extra_class }}">
+      Toutes
+    </a>
+
+    {% if page.url == '/mon-panier/index.html' %}
+      {% assign extra_class = "is-active" %}
+    {% else %}
+      {% assign extra_class = "" %}
+    {% endif %}
+
+    <a href="/mon-panier" class="sidebar-item {{ extra_class }}">
+      Dans mon panier
+    </a>
+
     {% for item in site.shelves %}
       {% include partials/shelf_item.html item=item %}
     {% endfor %}

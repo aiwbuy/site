@@ -2,12 +2,15 @@
 layout: default
 ---
 
-<div class="page">
-
+<div class="blog">
   <h1 class="title">{{ page.title }}</h1>
 
   <div class="notification" markdown="1">
     {{ content }}
   </div>
+
+  {% for item in site.posts %}
+    {% include partials/post_item.html item=item %}
+  {% endfor %}
 
 </div>

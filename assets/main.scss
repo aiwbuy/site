@@ -4,10 +4,16 @@
 $fa-font-path: "/assets/fonts";
 
 $family-primary: "Roboto Condensed", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$link: hsl(0, 0%, 4%);
 
 @import "font-awesome/font-awesome";
 @import "bulma";
 @import "ui";
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
 
 .nav {
   background-color: $black;
@@ -50,6 +56,7 @@ $family-primary: "Roboto Condensed", BlinkMacSystemFont, -apple-system, "Segoe U
 .item-title {
   text-align: center;
   text-transform: uppercase;
+  margin-top: .4rem;
 }
 
 .sidebar-item {
@@ -57,4 +64,11 @@ $family-primary: "Roboto Condensed", BlinkMacSystemFont, -apple-system, "Segoe U
     background-color: $warning !important;
     color: $black !important;
   }
+}
+
+.grid-item {
+  margin-bottom: 1rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  width: 250px;
 }

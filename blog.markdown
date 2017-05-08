@@ -2,11 +2,7 @@
 title: Carnet de bord
 date: 2017-05-07 21:17:00 +02:00
 permalink: "/carnet-de-bord/index.html"
-layout: page
+layout: blog
 ---
 
-Un endroit où je vous parle de mes trouvailles, centres d'intérêts et aventures.
-
-{% for item in site.posts %}
-  {% include partials/post_item.html item=item %}
-{% endfor %}
+Suivez mes découvertes et aventures.
