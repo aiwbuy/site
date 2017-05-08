@@ -5,7 +5,6 @@ collections:
   posts:
     title: Articles
     output: true
-    layout: post
   uploads:
     title: Fichiers
     output: true
@@ -13,7 +12,6 @@ collections:
     title: Trouvailles
     output: true
     permalink: "/mes-trouvailles/:title/index.html"
-    layout: find
 defaults:
 - scope:
     path: _posts
@@ -25,4 +23,5 @@ defaults:
     type: finds
   values:
     layout: find
+    is_in_bag: false
 permalink: "/carnet-de-bord/:title"
