@@ -9,7 +9,7 @@ Retrouvez ici toutes les trouvailles que j'ai fini par acheter.
 
 N'hésitez pas à [m'envoyer les vôtres](#) !
 
-{% assign finds_in_bag = site.finds | where: "is_in_bag", "yes" %}
+{% assign finds_in_bag = site.finds | where: "is_in_bag", "true" %}
 {% for item in finds_in_bag %}
   <li>
     {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
