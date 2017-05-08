@@ -5,4 +5,4 @@ permalink: "/mon-panier/index.html"
 layout: bag
 ---
 
-Retrouvez ici toutes les trouvailles que j'ai fini par acheter. N'hésitez pas à [m'envoyer les vôtres](#) !
+Retrouve ici toutes les trouvailles que j'ai fini par acheter. N'hésite pas à [m'envoyer les tiennes](#) ! Au point où j'en suis, une de plus ou une de moins, lol ...
