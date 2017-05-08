@@ -22,16 +22,19 @@ defaults:
     type: posts
   values:
     layout: post
+    thumbnail:
 - scope:
     path: _finds
     type: finds
   values:
     layout: find
-    is_in_bag: 
+    is_in_bag:
+    thumbnail:
     shelves: []
 - scope:
     path: _shelves
     type: shelves
   values:
     layout: shelf
+    thumbnail:
 permalink: "/carnet-de-bord/:title"
