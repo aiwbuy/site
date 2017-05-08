@@ -5,4 +5,4 @@ permalink: "/carnet-de-bord/index.html"
 layout: blog
 ---
 
-Suivez mes découvertes et aventures.
+C'est ici que vous pouvez suivre mes découvertes et aventures.

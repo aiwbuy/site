@@ -6,4 +6,4 @@ shelves:
 - chaussures
 ---
 
-Ce sont mes nouvelles chaussures.
+Ce sont mes nouvelles chaussures fétiches. Avec elles, je peux tout accomplir. Enfin, tout sauf me lever tôt le dimanche. ^^
