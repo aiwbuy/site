@@ -27,12 +27,11 @@ defaults:
     type: finds
   values:
     layout: find
-    is_in_bag: 
+    is_in_bag:
     shelves: []
 - scope:
     path: _shelves
     type: shelves
   values:
     layout: shelf
-    slug: 
 permalink: "/carnet-de-bord/:title"

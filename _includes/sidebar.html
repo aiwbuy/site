@@ -3,7 +3,7 @@
   <ul>
     {% for shelf in site.shelves %}
       <li>
-        <a href="/etageres/{{ shelf.slug }}">
+        <a href="{{ shelf.url | remove: '/index.html' }}">
           {{ shelf.title }}
         </a>
       </li>
