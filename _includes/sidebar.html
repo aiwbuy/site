@@ -4,7 +4,12 @@
     {% for shelf in site.shelves %}
       <li>
         <a href="{{ shelf.url | remove: '/index.html' }}">
-          {{ shelf.title }}
+          <div>
+            <img src="{{ shelf.thumbnail }}" />
+          </div>
+          <div>
+            {{ shelf.title }}
+          </div>
         </a>
       </li>
     {% endfor %}
