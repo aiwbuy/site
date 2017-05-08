@@ -4,8 +4,6 @@ layout: default
 
 <div class="find">
 
-  <h1 class="title">{{ page.title }}</h1>
-
   <div class="columns">
 
     <div class="is-half column">
@@ -13,6 +11,9 @@ layout: default
     </div>
 
     <div class="is-half column">
+
+      <h1 class="title">{{ page.title }}</h1>
+
       {{ content }}
 
       {% if page.is_in_bag == 'yes' %}
@@ -25,6 +26,7 @@ layout: default
           </a>
         </p>
       {% endif %}
+
     </div>
 
   </div>
