@@ -7,5 +7,3 @@ shelves:
 ---
 
 Si tu veux écouter de la musique bien fort partout depuis ton téléphone, essaie cette enceinte. Elle déchire sa maman !! xD
-
-Essaie quand même de ne pas te faire taper dans les transports.
