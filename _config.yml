@@ -23,5 +23,5 @@ defaults:
     type: finds
   values:
     layout: find
-    is_in_bag:
+    is_in_bag: 
 permalink: "/carnet-de-bord/:title"
