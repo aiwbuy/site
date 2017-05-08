@@ -1,7 +1,6 @@
 ---
 title: All I Wanna Buy
 timezone: Europe/Paris
-permalink: /carnet-de-bord/:title
 collections:
   finds:
     title: Trouvailles
@@ -26,3 +25,4 @@ defaults:
     type: finds
   values:
     layout: find
+permalink: "/carnet-de-bord/:title"
