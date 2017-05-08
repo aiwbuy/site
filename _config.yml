@@ -4,16 +4,16 @@ timezone: Europe/Paris
 permalink: /carnet-de-bord/:title
 collections:
   finds:
-    title: Finds
+    title: Trouvailles
     output: true
     permalink: "/mes-trouvailles/:title/index.html"
     layout: find
   posts:
-    title: Posts
+    title: Articles
     output: true
     layout: post
   uploads:
-    title: Uploads
+    title: Fichiers
     output: true
 defaults:
 - scope:
