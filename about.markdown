@@ -5,4 +5,6 @@ permalink: "/a-propos/index.html"
 layout: page
 ---
 
-Moi c'est Aurélie ! Pour me contacter, c'est par [ici](#).
+Moi c'est Aurélie ! Toute nouvelle sur la toile, je collectionne les idées shopping et mes nouvelles acquisitions sur ce blog.
+
+Si tu as des suggestions, c'est par [ici](#).
