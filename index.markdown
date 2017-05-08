@@ -5,5 +5,5 @@ layout: home
 ---
 
 {% for item in site.finds %}
-  {% include partials/item.html item=item %}
+  {% include partials/find_item.html item=item %}
 {% endfor %}

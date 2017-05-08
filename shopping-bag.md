@@ -11,5 +11,5 @@ N'hésitez pas à [m'envoyer les vôtres](#) !
 
 {% assign finds_in_bag = site.finds | where: "is_in_bag", "yes" %}
 {% for item in finds_in_bag %}
-  {% include partials/item.html item=item %}
+  {% include partials/find_item.html item=item %}
 {% endfor %}

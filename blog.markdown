@@ -8,5 +8,5 @@ layout: page
 Un endroit où je vous parle de mes trouvailles, centres d'intérêts et aventures.
 
 {% for item in site.posts %}
-  {% include partials/item.html item=item %}
+  {% include partials/post_item.html item=item %}
 {% endfor %}

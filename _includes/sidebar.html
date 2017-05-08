@@ -1,17 +1,8 @@
 <nav>
   <h1>Mes étagères</h1>
   <ul>
-    {% for shelf in site.shelves %}
-      <li>
-        <a href="{{ shelf.url | remove: '/index.html' }}">
-          <div>
-            <img src="{{ shelf.thumbnail }}" width="150" />
-          </div>
-          <div>
-            {{ shelf.title }}
-          </div>
-        </a>
-      </li>
+    {% for item in site.shelves %}
+      {% include partials/shelf_item.html item=item %}
     {% endfor %}
   </ul>
 </nav>

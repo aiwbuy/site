@@ -1,0 +1,10 @@
+<li>
+  <a href="{{ item.url | relative_url | replace: '/index.html', '' }}">
+    <div>
+      <img src="{{ item.thumbnail }}" width="250" />
+    </div>
+    <div>
+      {{ item.title }}
+    </div>
+  </a>
+</li>
