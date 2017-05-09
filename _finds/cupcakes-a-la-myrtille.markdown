@@ -6,6 +6,9 @@ thumbnail: "/uploads/cupcakes-myrtilles.jpg"
 shelves:
 - delices
 image: "/uploads/welcome.jpg"
+etagères:
+- Chaussures
+- Délices
 ---
 
 Je pourrais en manger pendant des heures. C'est un supplice quand je n'en ai plus !
