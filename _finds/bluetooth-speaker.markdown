@@ -6,6 +6,7 @@ shelves:
 - tech
 Etagères:
 - Tech
+image: "/uploads/speaker.jpg"
 ---
 
 Si tu veux écouter de la musique bien fort partout depuis ton téléphone, essaie cette enceinte. Elle déchire sa maman !! xD
