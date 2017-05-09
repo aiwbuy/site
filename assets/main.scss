@@ -139,5 +139,8 @@ img {
   margin-bottom: 1rem;
   margin-left: .5rem;
   margin-right: .5rem;
-  width: 250px;
+
+  @media (min-width: 769px) {
+    width: 250px;
+  }
 }
