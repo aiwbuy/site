@@ -73,6 +73,27 @@
         <span>Mes trouvailles</span>
       </a>
 
+      {% for item in site.shelves %}
+
+        {% assign page_contains_current_shelf = false %}
+        {% for shelf in page.shelves %}
+          {% if item.url contains shelf %}
+            {% assign page_contains_current_shelf = true %}
+          {% endif %}
+        {% endfor %}
+
+        {% if page.url == item.url or page_contains_current_shelf %}
+          {% assign extra_class = "is-active" %}
+        {% else %}
+          {% assign extra_class = "" %}
+        {% endif %}
+
+        <a href="{{ item.url | relative_url | replace: '/index.html', '' }}" class="nav-item is-hidden-tablet {{ extra_class }}" style="padding-top: .25rem; padding-bottom: .25rem; padding-left: 2rem;">
+          <span>{{ item.title }}</span>
+        </a>
+
+      {% endfor %}
+
       {% if page.url == '/carnet-de-bord/index.html' %}
         {% assign extra_class = "is-active" %}
       {% else %}
