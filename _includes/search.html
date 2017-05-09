@@ -1,0 +1,79 @@
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Recherche</p>
+      <button class="delete"></button>
+    </header>
+    <section class="modal-card-body" id="search-view">
+      <form @submit="search" style="margin-bottom: 2rem;">
+        <div class="field">
+          <label class="label" for="query">Je cherche ...</label>
+          <p class="control">
+            <input class="input" id="query" name="query" v-model="query" type="search" placeholder="collier, flamant rose, noix de cajou, ..." autofocus="autofocus">
+          </p>
+        </div>
+      </form>
+
+
+      {% raw %}
+
+      <div class="notification" v-if="results.length == 0">
+        Désolé, aucun résultat trouvé.
+      </div>
+
+      <article class="media" v-for="item in results">
+        <figure class="media-left">
+          <p class="image is-128x128" style="overflow: hidden;">
+            <a v-bind:href="item.url">
+              <img :src="item.thumbnail" />
+            </a>
+          </p>
+        </figure>
+        <div class="media-content">
+          <h1 class="title is-4" style="margin-bottom: 0.5rem;">
+            <a v-bind:href="item.url">
+              {{item.title}}
+            </a>
+          </h1>
+          <div v-html="item.content"></div>
+        </div>
+      </article>
+      {% endraw %}
+
+    </section>
+    <footer class="modal-card-foot">
+      <div style="width: 100%">
+        <button class="button is-success is-pulled-right" type="submit">Fais-moi rêver !</button>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script>
+  window.searchItemsArray = [
+    {% for item in site.finds %}
+      {
+        "title": "{{ item.title | strip | xml_escape }}",
+        "thumbnail": "{{ item.thumbnail | strip }}",
+        "excerpt": "{{ item.excerpt | strip }}",
+        "content": "{{ item.content | strip }}",
+        "url": "{{ item.url | strip | relative_url | replace: '/index.html', '' }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  window.searchItemsObject = {
+    {% for item in site.finds %}
+      "{{ item.url | strip | relative_url | replace: '/index.html', '' }}": {
+        "title": "{{ item.title | strip | xml_escape }}",
+        "thumbnail": "{{ item.thumbnail | strip }}",
+        "excerpt": "{{ item.excerpt | strip }}",
+        "content": "{{ item.content | strip }}",
+        "url": "{{ item.url | strip | relative_url | replace: '/index.html', '' }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+</script>
