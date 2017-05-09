@@ -22,6 +22,13 @@ img {
   }
 }
 
+.page-wrap {
+  @media (min-width: 769px) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
 .nav {
   background-color: $black;
 

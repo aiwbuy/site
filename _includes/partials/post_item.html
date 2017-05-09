@@ -1,7 +1,14 @@
-<li>
-  {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
-  <h2>
-    <a class="item-link" href="{{ item.url | relative_url | replace: '/index.html', '' }}">{{ item.title | escape }}</a>
-  </h2>
-  <span class="item-timestamp">{{ item.date | date: date_format }}</span>
-</li>
+<div class="column is-half">
+  <a href="{{ item.url | relative_url | replace: '/index.html', '' }}" class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        {{ item.title | escape }}
+      </p>
+    </header>
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src="{{ item.thumbnail }}" alt="{{ item.title | escape }}">
+      </figure>
+    </div>
+  </a>
+</div>

@@ -9,8 +9,10 @@ layout: default
     {{ content }}
   </div>
 
-  {% for item in site.posts %}
-    {% include partials/post_item.html item=item %}
-  {% endfor %}
+  <div class="columns is-multiline">
+    {% for item in site.posts %}
+      {% include partials/post_item.html item=item %}
+    {% endfor %}
+  </div>
 
 </div>
