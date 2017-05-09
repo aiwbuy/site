@@ -2,13 +2,23 @@
 
 <nav class="nav">
   <div class="container">
-    <div class="nav-left">
+
+    <div class="nav-left is-hidden-mobile">
       <a class="nav-item">
-        <!-- <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo"> -->
         <div class="brand">
           <a href="/" style="color: #fff;">
-            <div>All I Wanna</div>
-            <div>Buy</div>
+            <span>All I Wanna</span>
+            <span class="brand-last">Buy</span>
+          </a>
+        </div>
+      </a>
+    </div>
+
+    <div class="nav-center is-hidden-tablet">
+      <a class="nav-item">
+        <div class="brand">
+          <a href="/" style="color: #fff;">
+            All I Wanna Buy
           </a>
         </div>
       </a>
@@ -26,6 +36,33 @@
     <!-- Add the modifier "is-active" to display it on mobile -->
     <div class="nav-right nav-menu">
 
+      {% if page.url == '/mon-panier/index.html' %}
+        {% assign extra_style = "background-color: #ffdd57;" %}
+      {% else %}
+        {% assign extra_style = "" %}
+      {% endif %}
+
+      <div href="#" class="nav-item is-hidden-tablet" style="display: block; padding: 0;">
+        <nav class="level is-mobile">
+          <div class="level-item has-text-centered" style="padding-top: 9px">
+            <a href="#">
+              <p class="heading">Recherche</p>
+              <p class="title">
+                <i class="fa fa-search"></i>
+              </p>
+            </a>
+          </div>
+          <div class="level-item has-text-centered" style="padding-top: 9px; {{ extra_style }}">
+            <a href="/mon-panier">
+              <p class="heading">Dans mon panier ({{ finds_in_bag.size }})</p>
+              <p class="title">
+                <i class="fa fa-shopping-bag "></i>
+              </p>
+            </a>
+          </div>
+        </nav>
+      </div>
+
       {% if page.url == '/' %}
         {% assign extra_class = "is-active" %}
       {% else %}
@@ -33,7 +70,7 @@
       {% endif %}
 
       <a href="/" class="nav-item {{ extra_class }}">
-        Mes trouvailles
+        <span>Mes trouvailles</span>
       </a>
 
       {% if page.url == '/carnet-de-bord/index.html' %}
@@ -43,7 +80,7 @@
       {% endif %}
 
       <a href="/carnet-de-bord" class="nav-item {{ extra_class }}">
-        Carnet de bord
+        <span>Carnet de bord</span>
       </a>
 
       {% if page.url == '/a-propos/index.html' %}
@@ -53,10 +90,10 @@
       {% endif %}
 
       <a href="/a-propos" class="nav-item {{ extra_class }}">
-        A propos
+        <span>A propos</span>
       </a>
 
-      <a class="nav-item">
+      <a class="nav-item is-hidden-mobile">
         <i class="fa fa-search"></i>
       </a>
 
@@ -66,7 +103,7 @@
         {% assign extra_class = "" %}
       {% endif %}
 
-      <a href="/mon-panier" class="nav-item {{ extra_class }}">
+      <a href="/mon-panier" class="nav-item nav-item-shopping-bag is-hidden-mobile {{ extra_class }}">
         <i class="fa fa-shopping-bag "></i>
         <span class="tag is-warning shopping-bag-tag">
           {{ finds_in_bag.size }}

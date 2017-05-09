@@ -1,7 +1,12 @@
 <div class="grid-item">
   <a href="{{ item.url | relative_url | replace: '/index.html', '' }}">
-    <div>
+    <div style="position; absolute;">
       <img src="{{ item.thumbnail }}" />
+      {% if item.is_in_bag == 'yes' %}
+        <span class="tag is-warning" style="position: absolute; top: .5rem; right: .5rem; color: #fff; border-radius: 50%; width: 2rem; height: 2rem; border: solid 2px #fff;">
+          <i class="fa fa-check" style="color: #000;font-size: .9rem;"></i>
+        </span>
+      {% endif %}
     </div>
     <div class="item-title">
       {{ item.title }}

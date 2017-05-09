@@ -1,4 +1,11 @@
-{% if page.url == item.url %}
+{% assign page_contains_current_shelf = false %}
+{% for shelf in page.shelves %}
+  {% if item.url contains shelf %}
+    {% assign page_contains_current_shelf = true %}
+  {% endif %}
+{% endfor %}
+
+{% if page.url == item.url or page_contains_current_shelf %}
   {% assign extra_class = "is-active" %}
 {% else %}
   {% assign extra_class = "" %}

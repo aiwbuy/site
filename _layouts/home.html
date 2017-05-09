@@ -10,7 +10,7 @@ layout: default
   </div>
 
   <div class="grid" id="grid">
-    {% for item in site.finds %}
+    {% for item in site.finds reversed %}
       {% include partials/find_item.html item=item %}
     {% endfor %}
   </div>

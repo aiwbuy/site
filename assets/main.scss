@@ -15,22 +15,83 @@ img {
   vertical-align: bottom;
 }
 
+.container {
+  @media (max-width: 768px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 .nav {
   background-color: $black;
-  height: 4rem;
+
+  @media (min-width: $tablet) {
+    height: 4rem;
+  }
 }
 
 .nav-item {
-  color: $grey-light !important;
+  // color: $grey-light !important;
   text-transform: uppercase;
   font-size: .9rem;
 
+  @media (max-width: 768px) {
+    color: $black !important;
+
+    &:hover {
+      color: $black !important;
+      background-color: $white-bis !important;
+    }
+
+    &.is-active {
+      color: $black !important;
+      background-color: $warning !important;
+
+      .shopping-bag-tag {
+        background-color: $white !important;
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    color: $grey-light !important;
+
+    &:hover {
+      color: $white !important;
+    }
+
+    &.is-active {
+      color: $white !important;
+    }
+  }
+}
+
+.nav-right {
+  .nav-item {
+    &.nav-item-shopping-bag {
+      @media (max-width: 768px) {
+        padding-top: .25rem !important;
+        padding-bottom: .25rem !important;
+      }
+    }
+  }
+}
+
+.nav-toggle {
+  span {
+    background-color: $grey-light !important;
+  }
+
   &:hover {
-    color: $white !important;
+    background-color: $warning;
+
+    span {
+      background-color: $black !important;
+    }
   }
 
   &.is-active {
-   color: $white !important;
+    background-color: $warning;
   }
 }
 
@@ -41,8 +102,16 @@ img {
   line-height: 24px;
 
   .nav-item {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    @media (min-width: $tablet) {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+}
+
+.brand-last {
+  @media (min-width: $tablet) {
+    display: block;
   }
 }
 
