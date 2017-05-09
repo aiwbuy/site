@@ -52,7 +52,7 @@
 
 <script>
   window.searchItemsArray = [
-    {% for item in site.finds %}
+    {% for item in site.finds reversed %}
       {
         "title": "{{ item.title | strip | xml_escape }}",
         "thumbnail": "{{ item.thumbnail | strip }}",
@@ -65,7 +65,7 @@
   ];
 
   window.searchItemsObject = {
-    {% for item in site.finds %}
+    {% for item in site.finds reversed %}
       "{{ item.url | strip | relative_url | replace: '/index.html', '' }}": {
         "title": "{{ item.title | strip | xml_escape }}",
         "thumbnail": "{{ item.thumbnail | strip }}",
