@@ -22,14 +22,14 @@ defaults:
     type: posts
   values:
     layout: post
-    image:
+    image: 
 - scope:
     path: _finds
     type: finds
   values:
     layout: find
-    is_in_bag:
-    image:
+    is_in_bag: 
+    image: 
     shelves: []
 - scope:
     path: _shelves
