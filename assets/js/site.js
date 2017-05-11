@@ -1,17 +1,42 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // PINTEREST GRID
+  // REACTIVE SEARCH
   // ****
 
-  var gridEl = document.querySelector('#grid');
+  var searchIndex = lunr(function () {
+    this.ref('url');
+    this.field('title');
+    this.field('image');
+    this.field('content');
 
-  if (gridEl !== null) {
-    imagesLoaded(document.querySelector('#grid'), function(instance) {
-      new Masonry('.grid', {
-        itemSelector: '.grid-item',
-      });
-    });
-  }
+    var self = this;
+
+    window.searchItemsArray.forEach(function (doc) {
+      self.add(doc);
+    })
+  })
+
+  new Vue({
+    el: '#search-view',
+    data: function () {
+      return {
+        query: '',
+        results: window.searchItemsArray
+      }
+    },
+    methods: {
+      search: function (e) {
+        e.preventDefault();
+        var lunrResults = searchIndex.search('*' + this.query + '*');
+        var results = []
+        lunrResults.forEach(function (result) {
+          var findItem = window.searchItemsObject[result.ref];
+          results.push(findItem);
+        })
+        this.results = results;
+      }
+    }
+  })
 
   // MOBILE MENU
   // ****
@@ -52,42 +77,17 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.classList.remove('is-active');
   });
 
-  // REACTIVE SEARCH
+  // PINTEREST GRID
   // ****
 
-  var searchIndex = lunr(function () {
-    this.ref('url');
-    this.field('title');
-    this.field('image');
-    this.field('content');
+  var gridEl = document.querySelector('#grid');
 
-    var self = this;
-
-    window.searchItemsArray.forEach(function (doc) {
-      self.add(doc);
-    })
-  })
-
-  new Vue({
-    el: '#search-view',
-    data: function () {
-      return {
-        query: '',
-        results: window.searchItemsArray
-      }
-    },
-    methods: {
-      search: function (e) {
-        e.preventDefault();
-        var lunrResults = searchIndex.search('*' + this.query + '*');
-        var results = []
-        lunrResults.forEach(function (result) {
-          var findItem = window.searchItemsObject[result.ref];
-          results.push(findItem);
-        })
-        this.results = results;
-      }
-    }
-  })
+  if (gridEl !== null) {
+    imagesLoaded(document.querySelector('#grid'), function(instance) {
+      new Masonry('.grid', {
+        itemSelector: '.grid-item',
+      });
+    });
+  }
 
 });

@@ -1,52 +1,49 @@
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Recherche</p>
-      <button class="delete"></button>
-    </header>
-    <section class="modal-card-body" id="search-view">
-      <form @submit="search" style="margin-bottom: 2rem;">
-        <div class="field">
-          <label class="label" for="query">Je cherche ...</label>
-          <p class="control">
-            <input class="input" id="query" name="query" v-model="query" type="search" placeholder="collier, flamant rose, noix de cajou, ..." autofocus="autofocus">
-          </p>
+<div id="search-view">
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <div class="modal-card-title">
+          <form @submit="search">
+            <div class="field">
+              <p class="control">
+                <input class="input" id="query" name="query" v-model="query" type="search" placeholder="collier, flamant rose, noix de cajou, ..." autofocus="autofocus" style="width: 90%; padding: 1.5rem;">
+              </p>
+            </div>
+          </form>
         </div>
-      </form>
+        <button class="delete" style="padding: 1rem;"></button>
+      </header>
+      <section class="modal-card-body">
 
+        {% raw %}
 
-      {% raw %}
+          <div class="notification" v-if="results.length == 0">
+            Désolé, aucun résultat trouvé.
+          </div>
 
-      <div class="notification" v-if="results.length == 0">
-        Désolé, aucun résultat trouvé.
-      </div>
+          <article class="media" v-for="item in results">
+            <figure class="media-left">
+              <p class="image is-128x128" style="overflow: hidden;">
+                <a v-bind:href="item.url">
+                  <img :src="item.image" />
+                </a>
+              </p>
+            </figure>
+            <div class="media-content">
+              <h1 class="title is-4" style="margin-bottom: 0.5rem;">
+                <a v-bind:href="item.url">
+                  {{item.title}}
+                </a>
+              </h1>
+              <div v-html="item.content"></div>
+            </div>
+          </article>
 
-      <article class="media" v-for="item in results">
-        <figure class="media-left">
-          <p class="image is-128x128" style="overflow: hidden;">
-            <a v-bind:href="item.url">
-              <img :src="item.image" />
-            </a>
-          </p>
-        </figure>
-        <div class="media-content">
-          <h1 class="title is-4" style="margin-bottom: 0.5rem;">
-            <a v-bind:href="item.url">
-              {{item.title}}
-            </a>
-          </h1>
-          <div v-html="item.content"></div>
-        </div>
-      </article>
-      {% endraw %}
+        {% endraw %}
 
-    </section>
-    <footer class="modal-card-foot">
-      <div style="width: 100%">
-        <button class="button is-success is-pulled-right" type="submit">Fais-moi rêver !</button>
-      </div>
-    </footer>
+      </section>
+    </div>
   </div>
 </div>
 

@@ -151,3 +151,14 @@ img {
     width: 250px;
   }
 }
+
+@media (max-width: 768px) {
+  #search-view {
+    .modal-card {
+      margin: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+}
