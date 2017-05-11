@@ -45,16 +45,24 @@ document.addEventListener("DOMContentLoaded", function () {
   var toggleMenu = document.querySelector('.nav-menu');
   var activeClassName = 'is-active';
 
+  function openMenu () {
+    toggleElement.classList.add(activeClassName);
+    toggleMenu.classList.add(activeClassName);
+  }
+
+  function closeMenu () {
+    toggleElement.classList.remove(activeClassName);
+    toggleMenu.classList.remove(activeClassName);
+  }
+
   toggleElement.addEventListener('click', function (e) {
     e.preventDefault();
 
     if (toggleElement.classList.contains('is-active')) {
-      toggleElement.classList.remove(activeClassName);
-      toggleMenu.classList.remove(activeClassName);
+      closeMenu()
 
     } else {
-      toggleElement.classList.add(activeClassName);
-      toggleMenu.classList.add(activeClassName);
+      openMenu()
     }
   });
 
@@ -69,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     instance.addEventListener('click', function (e) {
       e.preventDefault();
       modal.classList.add('is-active');
+      closeMenu()
     })
   })
 
