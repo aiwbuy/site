@@ -9,7 +9,7 @@ layout: default
     {{ content }}
   </div>
 
-  {% assign finds = site.finds | where_exp: "item", "item.shelves contains page.slug" %}
+  {% assign finds = site.finds | where_exp: "item", "item.etageres contains page.title" %}
   <div class="grid" id="grid">
     {% for item in finds reversed %}
       {% include partials/find_item.html item=item %}

@@ -3,8 +3,8 @@ title: Parapluie japonais
 date: 2002-05-08 10:34:00 +02:00
 image: "/uploads/umbrella.jpg"
 is_in_bag: true
-shelves:
-- chaussures
+etageres:
+- Chaussures
 ---
 
 Pour aller avec mes chaussures et me protéger de la pluie, avec classe.
