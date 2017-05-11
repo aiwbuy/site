@@ -6,7 +6,7 @@ collections:
     title: Articles
     output: true
   shelves:
-    title: Etagères
+    title: Etageres
     output: true
     permalink: "/etageres/:title/index.html"
   uploads:
