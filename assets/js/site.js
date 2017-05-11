@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var searchIndex = lunr(function () {
     this.ref('url');
     this.field('title');
-    this.field('thumbnail');
+    this.field('image');
     this.field('content');
 
     var self = this;

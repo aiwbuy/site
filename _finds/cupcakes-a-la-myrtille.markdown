@@ -2,7 +2,7 @@
 title: Cupcakes à la myrtille
 date: 2014-05-08 10:34:00 +02:00
 is_in_bag: true
-thumbnail: "/uploads/cupcakes-myrtilles.jpg"
+image: "/uploads/cupcakes-myrtilles.jpg"
 shelves:
 - delices
 ---

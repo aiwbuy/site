@@ -26,7 +26,7 @@
         <figure class="media-left">
           <p class="image is-128x128" style="overflow: hidden;">
             <a v-bind:href="item.url">
-              <img :src="item.thumbnail" />
+              <img :src="item.image" />
             </a>
           </p>
         </figure>
@@ -55,7 +55,7 @@
     {% for item in site.finds reversed %}
       {
         "title": "{{ item.title | strip | xml_escape }}",
-        "thumbnail": "{{ item.thumbnail | strip }}",
+        "image": "{{ item.image | strip }}",
         "excerpt": "{{ item.excerpt | strip }}",
         "content": "{{ item.content | strip }}",
         "url": "{{ item.url | strip | relative_url | replace: '/index.html', '' }}"
@@ -68,7 +68,7 @@
     {% for item in site.finds reversed %}
       "{{ item.url | strip | relative_url | replace: '/index.html', '' }}": {
         "title": "{{ item.title | strip | xml_escape }}",
-        "thumbnail": "{{ item.thumbnail | strip }}",
+        "image": "{{ item.image | strip }}",
         "excerpt": "{{ item.excerpt | strip }}",
         "content": "{{ item.content | strip }}",
         "url": "{{ item.url | strip | relative_url | replace: '/index.html', '' }}"

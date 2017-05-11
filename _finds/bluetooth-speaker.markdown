@@ -1,7 +1,7 @@
 ---
 title: Bluetooth Speaker
 date: 2017-05-08 11:47:00 +02:00
-thumbnail: "/uploads/speaker.jpg"
+image: "/uploads/speaker.jpg"
 shelves:
 - tech
 ---
