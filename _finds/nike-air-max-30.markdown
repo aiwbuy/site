@@ -2,7 +2,7 @@
 title: Nike Air Max 30
 date: 2012-05-08 11:47:00 +02:00
 thumbnail: "/uploads/chaussures-nike.jpg"
-is_in_bag: 'yes'
+is_in_bag: true
 shelves:
 - chaussures
 ---
