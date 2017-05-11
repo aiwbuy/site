@@ -32,4 +32,15 @@ layout: default
 
   </div>
 
+  <div class="has-text-centered" style="margin-top: 2rem; margin-bottom: 2rem;">
+    <h2 class="title">Dernières trouvailles</h2>
+
+    <div class="grid" id="grid">
+      {% assign finds_in_bag = site.finds %}
+      {% for item in finds_in_bag reversed offset: 0 limit: 6 %}
+        {% include partials/find_item.html item=item %}
+      {% endfor %}
+    </div>
+  </div>
+
 </div>

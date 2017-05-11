@@ -1,7 +1,6 @@
 ---
 title: Cupcakes à la myrtille
-date: 2014-05-08 10:34:00 +02:00
-is_in_bag: true
+date: 2017-05-11 12:34:00 +02:00
 image: "/uploads/cupcakes-myrtilles.jpg"
 etageres:
 - Délices

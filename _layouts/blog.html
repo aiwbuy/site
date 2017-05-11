@@ -9,9 +9,9 @@ layout: default
     {{ content }}
   </div>
 
-  <div class="columns is-multiline">
+  <div class="grid" id="grid">
     {% for item in site.posts %}
-      {% include partials/post_item.html item=item %}
+      {% include partials/find_item.html item=item %}
     {% endfor %}
   </div>
 

@@ -1,6 +1,6 @@
 ---
 title: Nike Air Max 30
-date: 2012-05-08 11:47:00 +02:00
+date: 2017-05-11 12:21:00 +02:00
 image: "/uploads/chaussures-nike.jpg"
 is_in_bag: true
 etageres:

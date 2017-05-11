@@ -8,4 +8,14 @@ layout: default
   <div style="margin-top: 1rem; margin-bottom: 1rem;">
     {{ content }}
   </div>
+
+  <div class="has-text-centered" style="margin-top: 2rem; margin-bottom: 2rem;">
+    <h2 class="title">Derniers articles</h2>
+
+    <div class="grid" id="grid">
+      {% for item in site.posts limit: 6 %}
+        {% include partials/find_item.html item=item %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
