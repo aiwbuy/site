@@ -53,8 +53,8 @@
       {
         "title": "{{ item.title | strip | xml_escape }}",
         "image": "{{ item.image | strip }}",
-        "excerpt": "{{ item.excerpt | strip }}",
-        "content": "{{ item.content | strip }}",
+        "excerpt": {{ item.excerpt | jsonify }},
+        "content": {{ item.content | jsonify }},
         "url": "{{ item.url | strip | relative_url | replace: '/index.html', '' }}"
       }
       {% unless forloop.last %},{% endunless %}
@@ -66,8 +66,8 @@
       "{{ item.url | strip | relative_url | replace: '/index.html', '' }}": {
         "title": "{{ item.title | strip | xml_escape }}",
         "image": "{{ item.image | strip }}",
-        "excerpt": "{{ item.excerpt | strip }}",
-        "content": "{{ item.content | strip }}",
+        "excerpt": {{ item.excerpt | jsonify }},
+        "content": {{ item.content | jsonify }},
         "url": "{{ item.url | strip | relative_url | replace: '/index.html', '' }}"
       }
       {% unless forloop.last %},{% endunless %}
