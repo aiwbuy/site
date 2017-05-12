@@ -1,5 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // PINTEREST GRID
+  // ****
+
+  var gridEl = document.querySelector('#grid');
+
+  if (gridEl !== null) {
+    imagesLoaded(document.querySelector('#grid'), function(instance) {
+      new Masonry('.grid', {
+        itemSelector: '.grid-item',
+      });
+    });
+  }
+
+  // MOBILE MENU
+  // ****
+
+  var toggleElement = document.querySelector('.nav-toggle');
+  var toggleMenu = document.querySelector('.nav-menu');
+  var activeClassName = 'is-active';
+
+  function openMenu () {
+    toggleElement.classList.add(activeClassName);
+    toggleMenu.classList.add(activeClassName);
+  }
+
+  function closeMenu () {
+    toggleElement.classList.remove(activeClassName);
+    toggleMenu.classList.remove(activeClassName);
+  }
+
+  toggleElement.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (toggleElement.classList.contains('is-active')) {
+      closeMenu()
+
+    } else {
+      openMenu()
+    }
+  });
+
   // REACTIVE SEARCH
   // ****
 
@@ -38,34 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
-  // MOBILE MENU
-  // ****
-
-  var toggleElement = document.querySelector('.nav-toggle');
-  var toggleMenu = document.querySelector('.nav-menu');
-  var activeClassName = 'is-active';
-
-  function openMenu () {
-    toggleElement.classList.add(activeClassName);
-    toggleMenu.classList.add(activeClassName);
-  }
-
-  function closeMenu () {
-    toggleElement.classList.remove(activeClassName);
-    toggleMenu.classList.remove(activeClassName);
-  }
-
-  toggleElement.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    if (toggleElement.classList.contains('is-active')) {
-      closeMenu()
-
-    } else {
-      openMenu()
-    }
-  });
-
   // SITE SEARCH
   // ****
 
@@ -85,18 +98,5 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     modal.classList.remove('is-active');
   });
-
-  // PINTEREST GRID
-  // ****
-
-  var gridEl = document.querySelector('#grid');
-
-  if (gridEl !== null) {
-    imagesLoaded(document.querySelector('#grid'), function(instance) {
-      new Masonry('.grid', {
-        itemSelector: '.grid-item',
-      });
-    });
-  }
 
 });
