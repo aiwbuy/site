@@ -7,4 +7,4 @@ etageres:
 - Fringues
 ---
 
-Craquage total pour cette combinaison totally classe! à sortir pour une occasion spéciale ou tout simplement pour se la raconter et se faire complimenter! A shopper d'urgence chez [zara](https://www.zara.com/fr/fr/femme/combinaisons/combinaison-en-dentelle-assortie-c399001p4298230.html)
+Craquage total pour cette combinaison totally classe! à sortir pour une occasion spéciale ou tout simplement pour se la raconter et se faire complimenter! Elle est déjà dans mon placard et, tout comme moi, attend l'été. A shopper d'urgence chez [zara](https://www.zara.com/fr/fr/femme/combinaisons/combinaison-en-dentelle-assortie-c399001p4298230.html)
