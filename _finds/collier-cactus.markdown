@@ -3,7 +3,7 @@ title: Collier Cactus
 date: 2017-05-12 15:08:00 +02:00
 image: "/uploads/cactus_grande.png"
 etageres:
-- 
+- Bijoux
 - 
 ---
 
