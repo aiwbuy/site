@@ -5,9 +5,11 @@ layout: default
 <div class="shelf">
   <h1 class="title">{{ page.title }}</h1>
 
-  <div class="notification">
-    {{ content }}
-  </div>
+  {% if content.length > 0 %}
+    <div class="notification">
+      {{ content }}
+    </div>
+  {% endif %}
 
   {% assign finds = site.finds | where_exp: "item", "item.etageres contains page.title" %}
   <div class="grid" id="grid">

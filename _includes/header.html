@@ -94,15 +94,19 @@
 
       {% endfor %}
 
-      {% if page.url == '/carnet-de-bord/index.html' %}
-        {% assign extra_class = "is-active" %}
-      {% else %}
-        {% assign extra_class = "" %}
-      {% endif %}
+      {% if site.posts.size > 0 %}
 
-      <a href="/carnet-de-bord" class="nav-item {{ extra_class }}">
-        <span>Carnet de bord</span>
-      </a>
+        {% if page.url == '/carnet-de-bord/index.html' %}
+          {% assign extra_class = "is-active" %}
+        {% else %}
+          {% assign extra_class = "" %}
+        {% endif %}
+
+        <a href="/carnet-de-bord" class="nav-item {{ extra_class }}">
+          <span>Carnet de bord</span>
+        </a>
+
+      {% endif %}
 
       {% if page.url == '/a-propos/index.html' %}
         {% assign extra_class = "is-active" %}
