@@ -2,7 +2,7 @@
 title: Boîte cactus
 date: 2017-05-12 14:21:00 +02:00
 is_in_bag: true
-image: "/uploads/boite_cactus.jpg"
+image: "/uploads/boite_cactus.png"
 etageres:
 - Rangement
 ---

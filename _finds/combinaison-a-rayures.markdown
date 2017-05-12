@@ -2,7 +2,7 @@
 title: Combinaison à rayures
 date: 2017-05-12 13:50:00 +02:00
 is_in_bag: true
-image: "/uploads/combi_oiseau1.jpg"
+image: "/uploads/combi_oiseau1.png"
 etageres:
 - Fringues
 ---

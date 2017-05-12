@@ -2,7 +2,7 @@
 title: Sac Cartable
 date: 2017-05-12 16:27:00 +02:00
 is_in_bag: true
-image: "/uploads/cartable%20la%20redoute.jpg"
+image: "/uploads/cartable%20la%20redoute.png"
 etageres:
 - Accessoires
 ---

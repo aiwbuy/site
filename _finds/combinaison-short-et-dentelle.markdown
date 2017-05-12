@@ -1,7 +1,7 @@
 ---
 title: Combinaison Short et dentelle
 date: 2017-05-12 16:23:00 +02:00
-image: "/uploads/combi%20la%20redoute.jpg"
+image: "/uploads/combi%20la%20redoute.png"
 etageres:
 - Fringues
 ---

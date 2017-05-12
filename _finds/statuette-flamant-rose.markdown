@@ -2,7 +2,7 @@
 title: Statuette Flamant rose
 date: 2017-05-12 14:30:00 +02:00
 is_in_bag: true
-image: "/uploads/flamant.jpg"
+image: "/uploads/flamant.png"
 etageres:
 - Déco
 ---
