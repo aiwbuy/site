@@ -7,4 +7,4 @@ etageres:
 - Délices
 ---
 
-Dans la catégorie super trouvaille, voici l'infusion hibiscus. Fruité et acidulé, l'hibiscus se même aux notes de pommes et de baies rouges et noires. Peut se boire chaud ou façon thé glacé. Un régal. J'ai tout vidé. Vite un Kumsi Tea! 
+Dans la catégorie super trouvailles, voici l'infusion hibiscus. Fruité et acidulé, l'hibiscus se même aux notes de pommes et de baies rouges et noires. Peut se boire chaud ou façon thé glacé. Un régal. J'ai tout vidé. Vite un Kumsi Tea! 
