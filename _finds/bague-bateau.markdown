@@ -1,5 +1,5 @@
 ---
-title: Bague bateau
+title: Bague Bateau
 date: 2017-05-19 09:28:00 +02:00
 is_in_bag: true
 image: "/uploads/bague-bateau.JPG"
