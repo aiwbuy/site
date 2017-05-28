@@ -37,4 +37,3 @@ defaults:
   values:
     layout: shelf
 permalink: "/carnet-de-bord/:title"
-
